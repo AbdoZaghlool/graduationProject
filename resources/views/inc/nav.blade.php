@@ -7,6 +7,7 @@
             </h1>
             <ul>
                 <li><a href="/ispi/public/">home</a></li>
+                <li><a href="/ispi/public/centers">centers</a></li>
                 <li><a href="/ispi/public/course">courses</a></li>
                 <li><a href="/ispi/public/diploma">diplama</a></li>
                 <li><a href="/ispi/public/certification">certification</a></li>

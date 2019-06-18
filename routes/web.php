@@ -13,9 +13,11 @@ use App\Http\Controllers\pagesController;
 */
 
 Route::get('/', 'pagesController@index');
+Route::get('/centers', 'pagesController@centers');
 Route::get('/course', 'pagesController@courses');
 Route::get('/diploma', 'pagesController@diploma');
 Route::get('/certification', 'pagesController@certification');
 Route::get('/changePhoto', 'pagesController@photo');
 Route::get('/changeInfo', 'pagesController@info');
 Route::get('/changePrivacy', 'pagesController@privacy');
+Route::resource('course', 'postsController');
