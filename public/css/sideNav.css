@@ -129,6 +129,9 @@ input, textarea {
     cursor: text !important;
 }
 
+.editProfile h4 {
+    font-size: 1rem
+}
 .menu-wrap .editProfile h5 a:hover {
     color: rgb(211, 203, 203);
     font-weight: 500;
@@ -152,8 +155,12 @@ input, textarea {
 
 .privacyInfo h4 a {
     cursor:pointer !important;
+    font-size: .9rem !important;
 }
 
+.privacyInfo h4 {
+    font-size: 1rem !important;
+}
 
 .privacyInfo h4:hover
 {

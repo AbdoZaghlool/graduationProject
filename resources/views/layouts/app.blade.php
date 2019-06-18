@@ -8,18 +8,15 @@
         <meta name="keywords" content="courses, diploma, cetification, programming, computer science">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/all.css">
+        <script src="js/all.min.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
 
-
-    <link rel="stylesheet" href="css/edit-profile-basic.css">
-    <link rel="stylesheet" href="css/sideNav.css">
-    <script src="js/all.min.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-
-    <title>change profile photo</title>
+    <title>intelligent search in privte institute</title>
     </head>
 
 <body>

@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <section class="edite-personal-info-wrapper">
     <h1>Account
     </h1>
@@ -27,3 +31,5 @@
 
 </section>
 
+
+@endsection

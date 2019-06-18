@@ -52,22 +52,22 @@ input, textarea {
 
 }
 .main-search input{
-    width: 50vw;
-    height: 9vh;
-    border: 0px ;
-    border-radius: 3rem 3rem 0 0;
-    border-bottom: 1px solid rgba(143, 89, 89,.3);
-    padding: 0rem 7rem;
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: #333
+    width: 50vw !important;
+    height: 9vh!important;
+    border: 0px !important;
+    border-radius: 3rem 3rem 0 0!important;
+    border-bottom: 1px solid rgba(143, 89, 89,.3)!important;
+    padding: 0rem 7rem!important;
+    font-weight: 600!important;
+    font-size: 1.3rem!important;
+    color: #333!important
    
 }
 .main-search input::placeholder{
-    font-weight: 400;
-    font-size: 1.5rem;
-    padding-top: 30px;
-    opacity: .3;
+    font-weight: 400!important;
+    font-size: 1.5rem!important;
+    padding-top: 30px!important;
+    opacity: .3!important;
 }
 
 #search-cover .search-bar .fa-search{
@@ -685,3 +685,36 @@ nicescroll-cursors {
     cursor: pointer;
     background: rgba(60, 69, 82,.9)
 }
+
+
+
+
+
+ .btn-secondary{
+    display: block !important;
+    margin: 3.4rem auto 0px!important;
+    padding: 1rem 2.2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#fff;background-color:#6c757d;border-color:#6c757d;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+
+}
+
+.btn-secondary:hover
+{color:#fff;background-color:#5a6268;border-color:#545b62}
+
+.btn-secondary.focus,.btn-secondary:focus
+{box-shadow:0 0 0 .2rem rgba(130,138,145,.5)}
+
+.btn-secondary.disabled,.btn-secondary:disabled
+{color:#fff;background-color:#6c757d;border-color:#6c757d}
+
+.btn-secondary:not(:disabled):not(.disabled).active,.btn-secondary:not(:disabled):not(.disabled):active,.show>.btn-secondary.dropdown-toggle
+{color:#fff;background-color:#545b62;border-color:#4e555b}
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus,.btn-secondary:not(:disabled):not(.disabled):active:focus,.show>.btn-secondary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(130,138,145,.5)}
