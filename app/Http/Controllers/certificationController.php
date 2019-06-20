@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-use App\Course;
+use App\certification;
+use App\certificationScheduling;
+use App\institute;
+use DB;
 
-class postsController extends Controller
+class certificationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +17,8 @@ class postsController extends Controller
      */
     public function index()
     {
-        $courses=Course::all();
-        return view('pages.course')->with('courses',$courses);
+        $certifications=certificationScheduling::all();
+        return view('pages.certification')->with('certifications',$certifications);
     }
 
     /**

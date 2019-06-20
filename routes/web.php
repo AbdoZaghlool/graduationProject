@@ -20,4 +20,6 @@ Route::get('/certification', 'pagesController@certification');
 Route::get('/changePhoto', 'pagesController@photo');
 Route::get('/changeInfo', 'pagesController@info');
 Route::get('/changePrivacy', 'pagesController@privacy');
-Route::resource('course', 'postsController');
+Route::resource('course', 'courseController');
+Route::resource('diploma', 'diplomaController');
+Route::resource('certification', 'certificationController');
