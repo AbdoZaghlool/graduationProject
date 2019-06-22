@@ -45,9 +45,9 @@ return [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
-        ],'
-        
-        web' => [
+        ],
+
+        'institutes' => [
             'driver' => 'session',
             'provider' => 'institutes',
         ],
