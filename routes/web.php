@@ -1,6 +1,5 @@
 <?php
 use App\Http\Controllers\pagesController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +25,8 @@ Route::resource('certification', 'certificationController');
 Auth::routes();
 
 Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
+
+Route::get("institute/login", "InstituteController@login")->name("institute.login");
+Route::post("institute/attempt", "InstituteController@attempt")->name("institute.attempt");
+
+Route::get("institute/post/create", "PostController@create")->name("institutes.post.create");
