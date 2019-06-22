@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/register.css">
-         <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/login.css">
 
         <script src="js/all.min.js"></script>
         <script
@@ -26,7 +26,6 @@
 
         <main class="py-4">
 
-            @include('inc.snav')
 
             @include('inc.nav')
 
@@ -58,14 +57,14 @@
      <script>
                     var signInStudentButton = document.getElementById('signInUser');
                       var signInCenterButton = document.getElementById('signInCenter');
-                      var container = document.getElementById('container-login');
+                      var containerLogin = document.getElementById('container-login');
                   
                       signInStudentButton.addEventListener('click', () => {
-                          container.classList.add("right-panel-active");
+                        containerLogin.classList.add("right-panel-active");
                       });
                   
-                      sigInpCenterButton.addEventListener('click', () => {
-                          container.classList.remove("right-panel-active");
+                      signInCenterButton.addEventListener('click', () => {
+                        containerLogin.classList.remove("right-panel-active");
                       });
                   </script>
 

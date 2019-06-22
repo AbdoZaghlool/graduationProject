@@ -29,29 +29,42 @@ input, textarea {
 
 
 
-#main-nav {
-    background-image: linear-gradient(to right bottom, #051937, #002f4d, #004560, #005c70, #0c747b);
+#main-nav-user,
+#main-nav-company
+{
+    background: #FF416C;
+	background-image: radial-gradient(circle, #264964, #294f6c, #2c5474, #305a7c, #336084, #2f6284, #2c6584, #2a6783, #286679, #2c646f, #336265, #3a5f5d);
+    
     display: flex !important;
     align-items: center !important;
+
     justify-content: space-between !important;
     flex-direction: row !important;
     align-content: space-between;
     padding: 1.3rem 80px;
-    position : sticky;
+    /*position : sticky;*/
+    position: relative;
     width: 100%;
     top: 0;
     z-index: 4;
+    max-height: 74px;
   
 }
-#main-nav h1{
+#main-nav-company h1,
+#main-nav-user h1
+{
     font-size: 1.5rem;
 }
 
-#main-nav ul {
+#main-nav-company ul,
+#main-nav-user ul
+{
     display: flex;
     justify-content: center;
 }
-#main-nav ul li a{
+#main-nav-company ul li a,
+#main-nav-user ul li a
+{
     padding: .4rem .7rem;
     margin: .1rem;
     font-size: 1.1rem !important;
@@ -60,18 +73,23 @@ input, textarea {
     transition: all .3s ease-in !important;
 }
 
-#main-nav ul li a:hover{
+#main-nav-user ul li a:hover,
+#main-nav-company ul li a:hover
+{
     background: #fff !important;
-    color: dimgray !important;
+    color: #264964 !important;
 }
 
 .menu-wrap {
     position: fixed;
-    top: 73px;
+    top: 0px;
     left: 0px;
     height: 100vh;
     width: 12rem;
-    background-image: linear-gradient(to right bottom, #051937, #002f4d, #004560, #005c70, #0c747b);
+
+    /*background-image: linear-gradient(to right bottom, #051937, #002f4d, #004560, #005c70, #0c747b);
+    */
+    background-image: radial-gradient(circle, #264964, #2a4a62, #2e4a5f, #324b5d, #364b5b, #364c5b, #354c5b, #354d5b, #2f4e5d, #294f5e, #21515f, #17525f);   
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: 1;
     text-align: center;
@@ -79,13 +97,14 @@ input, textarea {
 }
 
 .profileInfo {
+    margin-top: 74px;
     padding: 40px 0;
 }
 
 .profileInfo img {
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 70px;
     border: none;
     border-radius: 50%;
     box-shadow: 0 0 4px teal;
@@ -126,7 +145,7 @@ input, textarea {
     float: left;
     font-size: .83rem !important;
     font-weight: 400;
-    cursor: text !important;
+    cursor: pointer !important;
 }
 
 .editProfile h4 {
@@ -143,46 +162,47 @@ input, textarea {
 
 .menu-wrap .editProfile h5 a {
     cursor: pointer !important;
+    float: left;
+    width: 100%
 }
 .menu-wrap svg {
     color:beige
 }
 
 .privacyInfo{
-    margin-top: 3rem;
-    cursor:pointer !important;
+    margin-top: 3.5rem;
 }
 
-.privacyInfo h4 a {
-    cursor:pointer !important;
-    font-size: .9rem !important;
+.privacyInfo h5 a{
+    float: left;
+    width: 100%;
+    cursor: pointer;
 }
 
-.privacyInfo h4 {
-    font-size: 1rem !important;
+.privacyInfo h5 a:hover {
+    color: rgb(211, 203, 203);
+    font-weight: 500;
+    background: #e4e1e1;
+    color: #333 !important;
+    width: 100%;
+    border-radius: .8rem;
 }
-
-.privacyInfo h4:hover
-{
-    background: #444 !important;
-    border-radius: 3rem !important;
-    padding: 0 22px !important;
-    font-size: .9rem !important;
-    transform: translatex(-18px) !important;
-    width: 115% !important;
-    cursor: pointer !important;
+.privacyInfo h5 a:hover svg {
+    color: rgb(211, 203, 203);
+    background: #e4e1e1;
+    color: #333 !important;
+    border-radius: .8rem;
 }
-
-
-
 
 footer {
     display: flex;
-    background: #333;
+    background-image: radial-gradient(circle, #264964, #294f6c, #2c5474, #305a7c, #336084, #2f6284, #2c6584, #2a6783, #286679, #2c646f, #336265, #3a5f5d);
     flex-direction: column;
     box-shadow: 0px 0px 9px #c3bcbc;
     width: calc(100% - 12rem);
     float: right;
+   
+
 
 }
 
@@ -190,7 +210,7 @@ footer {
     
     display: flex;
     justify-content: space-around;
-    height: 12rem;
+    height: 10rem;
     align-items: center;  
 }
 
@@ -200,77 +220,86 @@ footer {
 }
 .footer-wrap div a {
     
-    margin: .7rem 0;
-    font-weight: 500;
-    text-align: center;
+    margin: .7rem 0 !important;
+    font-weight: 500 !important;
+    text-align: center !important;
     cursor: pointer;
-    transition: .3s all ease;
+    transition: .3s all ease !important;
+    font-size: .8rem
+
+
 }
 
 .footer-wrap div a:hover {
-    color: #e9cfcf;
-    font-weight: 600
+    color: #e9cfcf !important;
+    font-weight: 600 !important
 }
 .footer-wrap:last-child {
     flex: 2 !important;
-    text-align: center
+    text-align: center !important
 
 }
 .footer-wrap div h4 {
-    margin-left: 10px
+    margin-left: 10px !important;
+    font-size: inherit
 }
 
 
 .footer-wrap div input {
-    border: none;
-    border-radius: 2rem;
-    height: 1.5rem;
-    width: 16rem;
+    border: none !important;
+    border-radius: 2rem !important;
+    height: 1.5rem !important;
+    width: 16rem !important;
     margin: 1rem 0;
-    background: #a09999;
-    box-shadow: 0px 0px 3px #b28a8a;
-    padding: 2px 13px;
-    font-size: 1.1rem;
+    background: #a09999 !important;
+    box-shadow: 0px 0px 3px #b28a8a !important;
+    padding: 2px 13px !important;
+    font-size: 1.1rem !important;
 
 }
 
 .copyright {
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    font-size: 1.1rem;
-    justify-content: space-around;
+    display: flex !important;
+    padding: 20px !important;
+    align-items: center !important;
+    font-size: 1.1rem !important;
+    justify-content: space-around !important;
 }
 .copyright h6 {
-    font-weight: 700;
-    font-size: .7rem;
-    letter-spacing: 1.1px;
-    font-family: sans-serif;
+    font-weight: 700 !important;
+    font-size: .7rem !important;
+    letter-spacing: 1.1px !important;
+    font-family: sans-serif !important;
 }
 
 main-form{
-    height: 100vh;
+    height: 100vh !important;
     width: 100vw;
-    background: darkolivegreen;
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    overflow: hidden;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    background: darkolivegreen !important;
+    position: fixed !important;
+    opacity: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 99 !important;
+    overflow: hidden !important;
+    display:flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .main-form > div {
-    height: 70%;
-    width: 70%;
-    background: #333;
-    border-radius: 5rem
+    height: 70% !important;
+    width: 70% !important;
+    background: #333 !important;
+    border-radius: 5rem !important
 }
 
 
 input::placeholder {
-    direction: ltr !important
+    direction:  !important
 }
+
+.post-content {
+    text-align: right
+}
+

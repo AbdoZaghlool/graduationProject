@@ -1,0 +1,103 @@
+.companyProfileInfo{
+	padding-top: 80px;
+}
+
+.companyMainInfo, .companyAddress {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.companyMainInfo img {
+    border-radius: 50%;
+}
+.companyMainInfo h6 {
+    color: dimgrey;
+    font-size: .84rem !important;
+    margin-top: .6rem !important;
+}
+
+.companyAddress,
+.companyphones,
+.companyFieldsTraining .fiels-wrap
+{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+
+
+.companyAddress h2,
+.companyphones h2,
+.companyFieldsTraining .fiels-wrap h2
+{
+    color: #444;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-left: 4.9rem
+}
+
+
+.companyAddress ul,
+.companyphones ul,
+.companyFieldsTraining .fiels-wrap ul
+{
+    background-image: linear-gradient(to left top, #388f89, #40908b, #47908c, #4e918e, #54918f, #569290, #579392, #599493, #579694, #559895, #539996, #519b97);
+    border-radius: 1rem;
+    margin: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center
+}
+
+.companyphones ul {
+    margin-left: -3rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: left;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.companyAddress ul li,
+.companyphones ul li,
+.companyFieldsTraining .fiels-wrap ul li
+{
+    background-image: linear-gradient(to left top, #388f89, #40908b, #47908c, #4e918e, #54918f, #569290, #579392, #599493, #579694, #559895, #539996, #519b97);
+    border-bottom:1px solid rgba(160, 150, 150, 0.9);
+    padding: .8rem 3rem;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+}
+.companyphones ul li {
+    padding-left: 5rem;
+}
+.companyAddress ul li:hover,
+.companyphones ul li:hover,
+.companyFieldsTraining .fiels-wrap ul li:hover
+{
+    background: rgb(72, 103, 124);
+    border-radius: 5px
+}
+
+.companyFieldsTraining{
+
+}
+
+.companyFieldsTraining .fiels-wrap {
+    align-items: center;
+}
+
+.companyFieldsTraining .fiels-wrap h2{
+    text-align: center;
+    margin: 1.5rem auto .9rem;
+
+}
+.companyFieldsTraining .fiels-wrap ul {
+    text-align: center;
+    width: 44%;
+    border-radius: 1rem;
+    
+}

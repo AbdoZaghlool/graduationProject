@@ -23,3 +23,6 @@ Route::get('/changePrivacy', 'pagesController@privacy');
 Route::resource('course', 'courseController');
 Route::resource('diploma', 'diplomaController');
 Route::resource('certification', 'certificationController');
+Auth::routes();
+
+Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
