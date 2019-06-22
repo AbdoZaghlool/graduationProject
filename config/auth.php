@@ -45,7 +45,13 @@ return [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
+        ],'
+        
+        web' => [
+            'driver' => 'session',
+            'provider' => 'institutes',
         ],
+
     ],
 
     /*
@@ -69,6 +75,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'institutes' => [
+            'driver' => 'eloquent',
+            'model' => App\Institute::class,
         ],
 
         // 'users' => [
@@ -95,6 +105,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
+        'institutes' => [
+            'provider' => 'institutes',
             'table' => 'password_resets',
             'expire' => 60,
         ],
