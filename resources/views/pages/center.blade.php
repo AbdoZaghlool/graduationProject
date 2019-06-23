@@ -7,7 +7,7 @@
 
     <div>
             <button type="button" class="btn btn-secondary">
-                    <a href="/ispi/public/create">Add Post</a></button>
+                    <a href="/ispi/public/addposts">Add Post</a></button>
     </div>
 
 >

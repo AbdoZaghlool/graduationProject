@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
 
@@ -51,6 +51,6 @@
     <p>No Posts Found :(</p>
     @endif
 
-    <button class="joinFree"><a href="/ispi/public/signup">Join For Free</a></button>
+    
 
 @endsection

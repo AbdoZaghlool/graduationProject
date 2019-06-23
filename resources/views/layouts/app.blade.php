@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/register.css">
          <link rel="stylesheet" href="css/login.css">
+         <link rel="stylesheet" href="css/addPost.css">
+
 
         <script src="js/all.min.js"></script>
         <script
@@ -21,12 +23,14 @@
 
     <title>intelligent search in privte institute</title>
     </head>
-
+ 
 <body>
 
-        <main class="py-4">
+ @if (Auth::user())
 
-            @include('inc.snav')
+   <main class="py-4">
+
+            
 
             @include('inc.nav')
 
@@ -34,7 +38,32 @@
 
             @include('inc.footer')
 
+             @include('inc.snav')
+
         </main>
+
+
+@else
+
+ <main class="py-4">
+
+            
+
+            @include('inc.nav')
+
+            @yield('content')
+
+            @include('inc.footer')
+
+            
+
+        </main>
+
+      
+      
+      
+@endif
+        
     </div>
 
 
@@ -68,6 +97,41 @@
                           container.classList.remove("right-panel-active");
                       });
                   </script>
+                  </section>
+
+<script>
+var courseForm = document.getElementById('course-form');
+var diplomaForm = document.getElementById('diploma-form');
+var certificationForm = document.getElementById('cetification-form');
+
+
+diplomaForm.style.display='none';
+certificationForm.style.display='none';
+
+
+function checkingMainCategory(x){
+if(x==0){
+    courseForm.style.display='block';
+    diplomaForm.style.display='none';
+    certificationForm.style.display='none';
+
+}
+else if(x==1){
+courseForm.style.display='none';
+diplomaForm.style.display='block';
+certificationForm.style.display='none';
+
+}
+else if(x==2){
+courseForm.style.display='none';
+diplomaForm.style.display='none';
+certificationForm.style.display='block';
+}
+
+};
+
+</script>
+
 
 
         </body>

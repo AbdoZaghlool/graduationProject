@@ -101,3 +101,19 @@
     border-radius: 1rem;
     
 }
+
+
+
+
+
+.categoty-view {
+    background:#ddd;
+    margin-left: 12rem;
+    height: 100vh
+}
+.categoty-view > div {
+    position:relative;
+    color: #333;
+    cursor: pointer;
+    
+}
