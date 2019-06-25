@@ -7,11 +7,19 @@
         <meta name="description" content="this's a website yoc an easily find any course where are you there.....">
         <meta name="keywords" content="courses, diploma, cetification, programming, computer science">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/all.css">
-        <link rel="stylesheet" href="css/register.css">
-         <link rel="stylesheet" href="css/login.css">
-         <link rel="stylesheet" href="css/addPost.css">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/all.css')}}">
+        <link rel="stylesheet" href="{{asset('css/register.css')}}">
+        <link rel="stylesheet" href="{{asset('css/login.css')}}">
+        <link rel="stylesheet" href="{{asset('css/addPost.css')}}">
+
+        <link rel="stylesheet" href="{{asset('css/fontawesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/sideNav.css')}}">
+
+        <link rel="stylesheet" href="{{asset('css/edite-profile-img.css')}}">
+        <link rel="stylesheet" href="{{asset('css/edit-privacy.css')}}">
+        <link rel="stylesheet" href="{{asset('css/edit-profile-basic.css')}}">
+
 
 
         <script src="js/all.min.js"></script>
@@ -23,47 +31,51 @@
 
     <title>intelligent search in privte institute</title>
     </head>
- 
+
 <body>
 
  @if (Auth::user())
 
    <main class="py-4">
 
-            
+    @include('inc.nav')
 
-            @include('inc.nav')
+    @include('inc.messages')
 
-            @yield('content')
+    @yield('content')
 
-            @include('inc.footer')
+    @include('inc.snav')
 
-             @include('inc.snav')
-
-        </main>
+    @include('inc.footer')
 
 
-@else
-
- <main class="py-4">
-
-            
-
-            @include('inc.nav')
-
-            @yield('content')
-
-            @include('inc.footer')
-
-            
 
         </main>
 
-      
-      
-      
+
+    @else
+
+    <main class="py-4">
+
+
+
+        @include('inc.nav')
+
+        @include('inc.messages')
+
+        @yield('content')
+
+        @include('inc.footer')
+
+
+
+    </main>
+
+
+
+
 @endif
-        
+
     </div>
 
 
@@ -75,11 +87,11 @@
                     var signUpStudentButton = document.getElementById('signUpUser');
                       var signUpCenterButton = document.getElementById('signUpCenter');
                       var container = document.getElementById('container');
-                  
+
                       signUpStudentButton.addEventListener('click', () => {
                           container.classList.add("right-panel-active");
                       });
-                  
+
                       signUpCenterButton.addEventListener('click', () => {
                           container.classList.remove("right-panel-active");
                       });
@@ -88,11 +100,11 @@
                     var signInStudentButton = document.getElementById('signInUser');
                       var signInCenterButton = document.getElementById('signInCenter');
                       var container = document.getElementById('container-login');
-                  
+
                       signInStudentButton.addEventListener('click', () => {
                           container.classList.add("right-panel-active");
                       });
-                  
+
                       sigInpCenterButton.addEventListener('click', () => {
                           container.classList.remove("right-panel-active");
                       });

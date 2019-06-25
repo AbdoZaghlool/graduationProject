@@ -1,7 +1,7 @@
 <aside class="menu-wrap">
     <div class="profileInfo">
-       <a><img src="images/photo-1518806118471-f28b20a1d79d.jif"></a>
-        <h4><a href="">Tareq Rezk</a></h4>
+    <a><img src="storage/uploads/{{Auth::user()->photo}}"></a>
+        <h4><a href="/ispi/public/dashboard">{{Auth::user()->name}}</a></h4>
     </div>
     <div class="editProfile">
             <h4><i class="fas fa-user-edit"></i> <a href="">edit personal Info</a></h4>

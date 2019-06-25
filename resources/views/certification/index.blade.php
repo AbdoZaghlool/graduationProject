@@ -10,7 +10,7 @@
         <div class="empty"></div>
              <div class="post-wrap">
                <div class="user-info">
-                       <a href="#"><img src="images/anonymous-dp-for-boys.jpg">user Name</a>
+                       <a href="#"><img src="storage/uploads/centerDefualt.png">user Name</a>
                  </div>
                      <div class="post">
                        <div class="post-content">
@@ -24,7 +24,7 @@
                                 <h4><span class="strong">course description: </span></h4>{{$certification->certification->	cer_desc}}
                                 <br>
                                 <h4><span class="strong">duration: </span></h4>{{$certification->cer_sc_duration	}} hours
- 
+
                                <br>
                                 <h4><span class="strong">start date : </span></h4>{{$certification->	cer_sc_price}} L.E
                              </div>
@@ -51,6 +51,6 @@
     <p>No Posts Found :(</p>
     @endif
 
-   
+
 
 @endsection

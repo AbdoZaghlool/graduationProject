@@ -11,7 +11,7 @@
                 <li><a href="/ispi/public/course">courses</a></li>
                 <li><a href="/ispi/public/diploma">diplama</a></li>
                 <li><a href="/ispi/public/certification">certification</a></li>
-                
+
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
@@ -26,11 +26,11 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/home">home</a></li>
+
                             <li>
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();">
+                                            document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
 

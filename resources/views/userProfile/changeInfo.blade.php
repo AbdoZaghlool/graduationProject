@@ -10,7 +10,9 @@
 
     <div class="container">
         <div>
-            <form>
+
+            <form method="POST" action="/ispi/public/updateInfo" >
+                @csrf
                 <div class="form-row">
                     <div class="col">
                         <label for="inputFirstName">First name</label>
@@ -34,6 +36,7 @@
                       <div class="form-group col-md-12">
                         <label for="inputCity">categories</label>
                         <select class="custom-select" multiple>
+
                             <option selected>choose your intersts</option>
                             <option value="1">Web Development</option>
                             <option value="2">Android</option>

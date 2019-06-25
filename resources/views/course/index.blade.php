@@ -10,7 +10,7 @@
         <div class="empty"></div>
             <div class="post-wrap">
                 <div class="user-info">
-                    <a href="#"><img src="images/anonymous-dp-for-boys.jpg">user Name</a>
+                    <a href="#"><img src="storage/uploads/centerDefualt.png">user Name</a>
                 </div>
                 <div class="post">
                     <div class="post-content">
@@ -19,12 +19,12 @@
                             <br>
                             <h4><span class="strong">center name: </span></h4>{{$course->institute_name}}
                             <br>
-                            <h4><span class="strong">trainer : </span></h4>{{$course->trainer}} 
+                            <h4><span class="strong">trainer : </span></h4>{{$course->trainer}}
                             <br>
                             <h4><span class="strong">course description: </span></h4>{{$course->course->course_desc}}
                             <br>
                             <h4><span class="strong">duration: </span></h4>{{$course->duration}} hours
- 
+
                             <br>
                             <h4><span class="strong">start date : </span></h4>{{$course->co_sc_price}} L.E
                         </div>
@@ -51,6 +51,6 @@
     <p>No Posts Found :(</p>
     @endif
 
-    
+
 
 @endsection

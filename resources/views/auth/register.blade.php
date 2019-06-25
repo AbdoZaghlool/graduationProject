@@ -17,19 +17,19 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                
+
 
                 <div class="card-body">
           <!--aaaaaaaaaaaaaaaaa -->
 
                    <div class="container-signUp" id="container">
                 <div class="form-container sign-up-user-container">
-                   
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
                         ">Create User Account</h1>
-                       
+
                         <span>or use your email for registration</span>
                         <div style="width: 100%;
                     display: flex;
@@ -44,7 +44,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                        
+
                     </div>
                         <input type="email" name='email' placeholder="Email" class="@error('email') is-invalid @enderror" />
                          @error('email')
@@ -64,8 +64,8 @@
                             flex-direction: row;
                             justify-content: space-between;
                             align-items: center">
-                                
-                                
+
+
                                 <input type="text" placeholder="city" style="margin: 8px 0px 8px 8px"/>
                             </div>
                             <br>
@@ -98,7 +98,7 @@
                         <input type="password" placeholder="Password" />
                         <input type="text" placeholder="Main Address" />
                         <input type="number" placeholder="Phone Number" />
-                        
+
                         <br>
                         <button>Sign Up</button>
                     </form>
@@ -113,79 +113,16 @@
                         </div>
                         <div class="overlay-panel overlay-right">
                             <h2>User Registeration</h2>
-                            
+
                             <p>Enter your personal details and start journey with us</p>
                             <button class="ghost" id="signUpUser">User Registeration</button>
                         </div>
                     </div>
                 </div>
             </div>
- 
 
-                <!--
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    -->
-                </div>
+            </div>
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@ class diplomaController extends Controller
     public function index()
     {
         $diplomas=diplomaScheduling::all();
-        return view('pages.diploma')->with('diplomas',$diplomas);
+        return view('diploma.index')->with('diplomas',$diplomas);
     }
 
     /**

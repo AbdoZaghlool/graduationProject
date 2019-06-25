@@ -13,16 +13,14 @@ use App\Http\Controllers\pagesController;
 */
 
 Route::get('/', 'pagesController@index');
-Route::get('/centers', 'pagesController@centers');
-Route::get('/course', 'pagesController@courses');
-Route::get('/diploma', 'pagesController@diploma');
-Route::get('/certification', 'pagesController@certification');
-Route::get('/changePhoto', 'pagesController@photo');
-Route::get('/changeInfo', 'pagesController@info');
-Route::get('/changePrivacy', 'pagesController@privacy');
+Route::get('/changePhoto', 'userController@photo');
+Route::get('/changeInfo', 'userController@info');
+Route::get('/changePrivacy', 'userController@privacy');
 Route::resource('course', 'courseController');
 Route::resource('diploma', 'diplomaController');
 Route::resource('certification', 'certificationController');
+Route::post('/updateInfo','userController@updateInfo');
+Route::post('/updateAccount','userController@updateAccount');
+Route::post('/updatePhoto','userController@updatePhoto');
 Auth::routes();
-
 Route::get('/dashboard', 'dashboardController@index')->name('dashboard');

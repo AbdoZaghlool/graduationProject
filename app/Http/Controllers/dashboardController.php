@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\user;
+use Image;
+use Illuminate\Support\Facades\Auth;
 
 class dashboardController extends Controller
 {
@@ -16,13 +19,20 @@ class dashboardController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
+     /**
+     * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('dashboard');
+
+
+        $user_id = auth()->user()->id;
+        $user=user::Find($user_id);
+        return view('userProfile.dashboard')->with('user',$user);
     }
+
+    
+
 }

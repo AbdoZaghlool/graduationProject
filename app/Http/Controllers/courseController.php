@@ -17,8 +17,8 @@ class courseController extends Controller
      */
     public function index()
     {
-        $courses=CourseScheduling::all();
-        return view('pages.course')->with('courses',$courses);
+        $courses = CourseScheduling::all();
+        return view('course.index')->with('courses', $courses);
     }
 
     /**
@@ -28,7 +28,7 @@ class courseController extends Controller
      */
     public function create()
     {
-        //
+        return view('course.create');
     }
 
     /**

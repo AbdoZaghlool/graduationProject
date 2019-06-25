@@ -17,8 +17,8 @@ class certificationController extends Controller
      */
     public function index()
     {
-        $certifications=certificationScheduling::all();
-        return view('pages.certification')->with('certifications',$certifications);
+        $certifications = certificationScheduling::all();
+        return view('certification.index')->with('certifications', $certifications);
     }
 
     /**
