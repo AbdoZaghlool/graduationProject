@@ -7,11 +7,17 @@
         <meta name="description" content="this's a website yoc an easily find any course where are you there.....">
         <meta name="keywords" content="courses, diploma, cetification, programming, computer science">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/all.css">
-        <link rel="stylesheet" href="css/register.css">
-         <link rel="stylesheet" href="css/login.css">
-         <link rel="stylesheet" href="css/addPost.css">
+       
+         
+
+          <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/all.css')}}">
+        <link rel="stylesheet" href="{{asset('css/register.css')}}">
+        <link rel="stylesheet" href="{{asset('css/login.css')}}">
+        <link rel="stylesheet" href="{{asset('css/addPost.css')}}">
+
+
+
 
 
         <script src="js/all.min.js"></script>

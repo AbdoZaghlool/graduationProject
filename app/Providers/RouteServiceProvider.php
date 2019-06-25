@@ -39,6 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapInstituteRoutes();
+
         //
     }
 
@@ -54,6 +56,18 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
+    }
+
+    protected function mapInstituteRoutes()
+    {
+            Route::group([
+                'middleware' => ['web' ,'institute'],
+                'prefix' => 'institute',
+                'as' => 'institute.',
+                'namespace' => $this->namespace.'\institute',
+            ], function ($router) {
+                require base_path('routes/institute.php');
+            });
     }
 
     /**

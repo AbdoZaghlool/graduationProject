@@ -31,11 +31,11 @@
                         @csrf 
 
                         <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff"> User Login</h1>
-                        <div class="social-container">
+                        <!-- <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                        </div>   -->
                         <span>or use your email for Login</span>
                         
                         <input type="email" placeholder="Email" class=" @error('email') is-invalid @enderror" name="email" />
@@ -65,8 +65,8 @@
                     
                 </div>
                 <div class="form-container sign-in-org-container">
-                    <form action="#">
-                        <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
+                    <form action="/ispi/public/institute/login" method="GET">
+                         <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
                         ">Training-Center Login</h1>
                         <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -74,18 +74,17 @@
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                         <span>or use your account</span>
-                   
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                   <!--    -->
+                        <input type="email" placeholder="Email" name="email" />
+                        <input type="password" placeholder="Password" name='password' />
                     <br>
                     
-                       <!-- <button><a href="/ispi/public/centers"></a>Sign In</button>  -->
+                        <button><a href="/ispi/public/centers"></a>Sign In</button>  
                     </form>
 
-                    <!-- make button 0out form to go dir centera-->
+                    <!--    -->
+
                     
-                  
-                    <button onclick="/ispi/public/centers">Sign In</button>
                 </div>
                 <div class="overlay-container">
                     <div class="overlay">

@@ -2,7 +2,7 @@
         <nav id="main-nav">
             <h1>
 
-                <a >ITC</a>
+                <a >ETC</a>
 
             </h1>
             <ul  >

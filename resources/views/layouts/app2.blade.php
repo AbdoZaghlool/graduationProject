@@ -7,8 +7,13 @@
         <meta name="description" content="this's a website yoc an easily find any course where are you there.....">
         <meta name="keywords" content="courses, diploma, cetification, programming, computer science">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/all.css">
+
+         <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/all.css')}}">
+        <link rel="stylesheet" href="{{asset('css/register.css')}}">
+        <link rel="stylesheet" href="{{asset('css/login.css')}}">
+
+
         <script src="js/all.min.js"></script>
         <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"

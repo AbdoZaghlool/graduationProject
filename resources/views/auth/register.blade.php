@@ -25,7 +25,7 @@
                    <div class="container-signUp" id="container">
                 <div class="form-container sign-up-user-container">
                    
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ url('/register') }}">
                         @csrf
                         <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
                         ">Create User Account</h1>
@@ -77,8 +77,12 @@
                                 </button>
                     </form>
                 </div>
-                <div class="form-container sign-up-org-container">
-                    <form action="#">
+
+                <!-- -->
+                 <div class="form-container sign-up-org-container">
+                    <form action="{{ url('institute/register') }}" method='POST'>
+
+                    @csrf
                         <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
                         ">Create Training-Center Account</h1>
                         <div class="social-container">
@@ -91,16 +95,16 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;">
-                        <input type="text" placeholder="User Name" style="margin: 8px 8px 8px 0px"/>
-                        <input type="text" placeholder="Login Name" style="margin: 8px 0px 8px 8px"/>
+                        <input type="text" placeholder="User Name"  name='name' style="margin: 8px 8px 8px 0px"/>
+                        
                     </div>
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                        <input type="email" placeholder="Email" name='email'  />
+                        <input type="password" placeholder="Password"  name='password' />
                         <input type="text" placeholder="Main Address" />
-                        <input type="number" placeholder="Phone Number" />
+                        <input type="number" placeholder="Phone Number" name='phone' />
                         
                         <br>
-                        <button>Sign Up</button>
+                        <button type="submit"  >Sign Up</button>
                     </form>
                 </div>
                 <div class="overlay-container">
