@@ -24,15 +24,15 @@
 
 <body>
 
-        <main class="py-4">
+
 
 
 
             @yield('content')
 
-        
 
-        </main>
+
+
     </div>
 
 
@@ -44,11 +44,11 @@
                     var signUpStudentButton = document.getElementById('signUpUser');
                       var signUpCenterButton = document.getElementById('signUpCenter');
                       var container = document.getElementById('container');
-                  
+
                       signUpStudentButton.addEventListener('click', () => {
                           container.classList.add("right-panel-active");
                       });
-                  
+
                       signUpCenterButton.addEventListener('click', () => {
                           container.classList.remove("right-panel-active");
                       });
@@ -57,49 +57,18 @@
                     var signInStudentButton = document.getElementById('signInUser');
                       var signInCenterButton = document.getElementById('signInCenter');
                       var containerLogin = document.getElementById('container-login');
-                  
+
                       signInStudentButton.addEventListener('click', () => {
                         containerLogin.classList.add("right-panel-active");
                       });
-                  
+
                       signInCenterButton.addEventListener('click', () => {
                         containerLogin.classList.remove("right-panel-active");
                       });
                   </script>
                   </section>
 
-<script>
-var courseForm = document.getElementById('course-form');
-var diplomaForm = document.getElementById('diploma-form');
-var certificationForm = document.getElementById('cetification-form');
 
-
-diplomaForm.style.display='none';
-certificationForm.style.display='none';
-
-
-function checkingMainCategory(x){
-if(x==0){
-    courseForm.style.display='block';
-    diplomaForm.style.display='none';
-    certificationForm.style.display='none';
-
-}
-else if(x==1){
-courseForm.style.display='none';
-diplomaForm.style.display='block';
-certificationForm.style.display='none';
-
-}
-else if(x==2){
-courseForm.style.display='none';
-diplomaForm.style.display='none';
-certificationForm.style.display='block';
-}
-
-};
-
-</script>
 
 
 

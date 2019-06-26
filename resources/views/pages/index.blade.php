@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/sideNav.css">
-        
+
         <script src="js/all.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -58,7 +58,7 @@
 
 
 
-            <h1>hello {{Auth::user()->name}}</h1>
+            <h1>hello <a href="/ispi/public/dashboard">{{Auth::user()->name}}</a></h1>
             @endif
 
 
@@ -205,29 +205,30 @@
 
                     <section style="height:20vh">
 
-<h1 style="text-align:center;color:rgb(9, 65, 65); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-bottom:2rem">
-Join Us Now For Free
 
-</h1>
-                    <div style="margin-top:1.1rem;z-index:99;text-align: center" class="login-reg">
-                        <a href="/ispi/public/login"
-                        style="
-                        background:teal; padding:.7rem 1.5rem;margin: .5rem;
-                        text-decoration:none;border:none;outline:none;
-                        border-radius:10px;
-                        "
-                        >Login</a>
-                        <a href="/ispi/public/register"
-                        style="
-                        background:teal; padding:.7rem 1.5rem;margin:.5rem;
-                        text-decoration:none;border:none;outline:none;
-                        border-radius:10px;
-                        "
-                        >Register</a>
-                    </div>
+    @if (!Auth::user())
 
+    <h1 style="text-align:center;color:rgb(9, 65, 65); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-bottom:2rem">Join Us Now For Free</h1>
 
-                    </section>
+    <div style="margin-top:1.1rem;z-index:99;text-align: center" class="login-reg">
+        <a href="/ispi/public/login"
+        style="
+        background:teal; padding:.7rem 1.5rem;margin: .5rem;
+        text-decoration:none;border:none;outline:none;
+        border-radius:10px;
+        "
+        >Login</a>
+        <a href="/ispi/public/register"
+        style="
+        background:teal; padding:.7rem 1.5rem;margin:.5rem;
+        text-decoration:none;border:none;outline:none;
+        border-radius:10px;
+        "
+        >Register</a>
+    </div>
+    @endif
+
+    </section>
 
 
 

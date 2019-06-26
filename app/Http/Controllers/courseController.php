@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Course;
-use App\CourseScheduling;
 use App\institute;
-use DB;
+
+
 class courseController extends Controller
 {
     /**
@@ -17,8 +17,7 @@ class courseController extends Controller
      */
     public function index()
     {
-        $courses = CourseScheduling::all();
-        return view('course.index')->with('courses', $courses);
+        return view('course.index');
     }
 
     /**
@@ -39,7 +38,18 @@ class courseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $course= new course;
+        $course->name=$request->input('name');
+        $course->description=$request->input('description');
+        $course->pivot->duration=$request->input('duration');
+        $course->pivot->co_sc_sDate=$request->input('start-date');
+        $course->pivot->trainer=$request->input('trainer');
+        $course->pivot->co_sc_price=$request->input('price');
+        $course->save();
+
+
+
+        return redirect('/center')->with('succes','course created!');
     }
 
     /**

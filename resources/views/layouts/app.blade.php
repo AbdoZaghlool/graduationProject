@@ -11,10 +11,11 @@
         <link rel="stylesheet" href="{{asset('css/all.css')}}">
         <link rel="stylesheet" href="{{asset('css/register.css')}}">
         <link rel="stylesheet" href="{{asset('css/login.css')}}">
-        <link rel="stylesheet" href="{{asset('css/addPost.css')}}">
+        <link rel="stylesheet" href="{{asset('css/addPostAll.css')}}">
+        <link rel="stylesheet" href="{{asset('css/sideNav.css')}}">
+        <link rel="stylesheet" href="css/user-style.css">
 
         <link rel="stylesheet" href="{{asset('css/fontawesome.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/sideNav.css')}}">
 
         <link rel="stylesheet" href="{{asset('css/edite-profile-img.css')}}">
         <link rel="stylesheet" href="{{asset('css/edit-privacy.css')}}">
@@ -34,47 +35,39 @@
 
 <body>
 
- @if (Auth::user())
-
-   <main class="py-4">
-
-    @include('inc.nav')
-
-    @include('inc.messages')
-
-    @yield('content')
-
-    @include('inc.snav')
-
-    @include('inc.footer')
-
-
-
-        </main>
-
-
-    @else
-
-    <main class="py-4">
-
-
+    @if (Auth::user())
 
         @include('inc.nav')
 
-        @include('inc.messages')
-
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        @include('inc.messages')
+                    </div>
+                </div>
+            </div>
         @yield('content')
 
         @include('inc.footer')
 
+        @include('inc.snav')
 
+     @else
 
-    </main>
+        @include('inc.nav')
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    @include('inc.messages')
+                </div>
+            </div>
+        </div>
+        @yield('content')
 
+        @include('inc.footer')
 
-
-@endif
+     @endif
 
     </div>
 
@@ -83,67 +76,34 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/script-index.js"></script>
+
+
     <script>
-                    var signUpStudentButton = document.getElementById('signUpUser');
-                      var signUpCenterButton = document.getElementById('signUpCenter');
-                      var container = document.getElementById('container');
+            var signUpStudentButton = document.getElementById('signUpUser');
+              var signUpCenterButton = document.getElementById('signUpCenter');
+              var container = document.getElementById('container');
 
-                      signUpStudentButton.addEventListener('click', () => {
-                          container.classList.add("right-panel-active");
-                      });
+              signUpStudentButton.addEventListener('click', () => {
+                  container.classList.add("right-panel-active");
+              });
 
-                      signUpCenterButton.addEventListener('click', () => {
-                          container.classList.remove("right-panel-active");
-                      });
-     </script>
-     <script>
-                    var signInStudentButton = document.getElementById('signInUser');
-                      var signInCenterButton = document.getElementById('signInCenter');
-                      var container = document.getElementById('container-login');
-
-                      signInStudentButton.addEventListener('click', () => {
-                          container.classList.add("right-panel-active");
-                      });
-
-                      sigInpCenterButton.addEventListener('click', () => {
-                          container.classList.remove("right-panel-active");
-                      });
-                  </script>
-                  </section>
-
-<script>
-var courseForm = document.getElementById('course-form');
-var diplomaForm = document.getElementById('diploma-form');
-var certificationForm = document.getElementById('cetification-form');
-
-
-diplomaForm.style.display='none';
-certificationForm.style.display='none';
-
-
-function checkingMainCategory(x){
-if(x==0){
-    courseForm.style.display='block';
-    diplomaForm.style.display='none';
-    certificationForm.style.display='none';
-
-}
-else if(x==1){
-courseForm.style.display='none';
-diplomaForm.style.display='block';
-certificationForm.style.display='none';
-
-}
-else if(x==2){
-courseForm.style.display='none';
-diplomaForm.style.display='none';
-certificationForm.style.display='block';
-}
-
-};
-
+              signUpCenterButton.addEventListener('click', () => {
+                  container.classList.remove("right-panel-active");
+              });
 </script>
+<script>
+            var signInStudentButton = document.getElementById('signInUser');
+              var signInCenterButton = document.getElementById('signInCenter');
+              var container = document.getElementById('container-login');
 
+              signInStudentButton.addEventListener('click', () => {
+                  container.classList.add("right-panel-active");
+              });
+
+              sigInpCenterButton.addEventListener('click', () => {
+                  container.classList.remove("right-panel-active");
+              });
+          </script>
 
 
         </body>

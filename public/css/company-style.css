@@ -43,15 +43,15 @@ input, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+
 }
 
 
+color:#797070;
 
 #search-cover h1{
     font-size: 2.7rem;
     padding: 20px ;
-    color:#797070;
     display: block;
     text-align: center;
 }
@@ -142,16 +142,10 @@ input, textarea {
     position: absolute;
     top: 0px;
     right: 0px;
-   
+
 }
 
 /* for company */
-
-
-.posts-wrapper .post-wrap-company {
-   
-
-}
 
 
 
@@ -209,7 +203,7 @@ input, textarea {
 }
 
 textarea{
-   
+
 display: block;
 margin: auto;
 background:rgba(100, 155, 255, 0.9);
@@ -261,7 +255,7 @@ direction: rtl;
     font-size: 1rem;
     font-weight: 400;
     width: 80%;
-    color: rgb(0, 0, 0);  
+    color: rgb(0, 0, 0);
 }
 
 .course-description h3 svg {
@@ -269,7 +263,7 @@ direction: rtl;
     font-weight: 300;
     transition: all .4s ease-in-out;
     cursor: pointer;
-   
+
 }
 
 
@@ -310,11 +304,11 @@ footer {
 }
 
 .footer-wrap {
-    
+
     display: flex;
     justify-content: space-around;
     height: 12rem;
-    align-items: center;  
+    align-items: center;
 }
 
 .footer-wrap div {
@@ -322,7 +316,7 @@ footer {
     flex-direction: column;
 }
 .footer-wrap div a {
-    
+
     margin: .7rem 0;
     font-weight: 500;
     text-align: center;
@@ -495,7 +489,7 @@ ul {
 
 
 .tex, textarea{
-   
+
 display: block;
 margin: auto;
 background:rgba(2, 60, 60, 0.72);
@@ -557,7 +551,7 @@ color: #fff
     transition: all .4s ease-in-out;
     cursor: pointer;
     font-size: 1.2rem
-   
+
 }
 
 
@@ -595,3 +589,46 @@ color: #fff
 
 
 
+
+
+
+
+
+.adding-post {
+    width: 30vw;
+    margin: auto;
+    text-align: center;
+
+}
+.adding-post ul {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+
+}
+
+.adding-post ul li {
+
+    text-align: center;
+}
+
+.adding-post ul li a {
+    background: #54918f;
+    padding: 1rem 1.4rem;
+    border:none;
+    outline: none;
+    margin: .3rem;
+    border-radius: 10px;
+    font-size: .8rem;
+}
+
+.adding-post ul li a:hover {
+    background: #7ca5a4;
+}
+
+.adding-post ul li a:focus {
+    outline: #3a7c7c;
+    box-shadow: 0 0 5px #1970ce
+}

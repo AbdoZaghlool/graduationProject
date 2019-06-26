@@ -5,14 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\ImageManagerStatic as Image;
+use App\City;
 
 class userController extends Controller
 {
 
-    public function city()
-    {
-        return $this->belongsTo('App\City','city_id','city_id');
-    }
+
 
     public function photo()
     {
@@ -21,8 +19,8 @@ class userController extends Controller
     }
     public function info()
     {
-
-        return view('userProfile.changeInfo');
+        $city = City::all()->pluck('city_id','city_name');
+        return view('userProfile.changeInfo')->with('city',$city);
     }
     public function privacy()
     {
@@ -61,18 +59,19 @@ class userController extends Controller
         }
     }
 
-
-
-
-
     public function updateInfo(Request $request)
     {
-        $this->validate($request, [
-            ''
+        $this->validate($request,[
+            'name' => 'required',
+            'address' => 'required',
+            'address2' => '',
         ]);
-
-
         $user = Auth::user();
+        $user->name=$request->input('name');
+       // $user->city()->city_name=$request->input('address');
+//        $user->name=$request->input('name');
+        $user->save();
+
         return view('userProfile.dashboard')->with('user', $user);
     }
 }

@@ -24,3 +24,7 @@ Route::post('/updateAccount','userController@updateAccount');
 Route::post('/updatePhoto','userController@updatePhoto');
 Auth::routes();
 Route::get('/dashboard', 'dashboardController@index')->name('dashboard');
+Route::get('/centers', 'pagesController@centers');
+Route::get('/centers/profile', 'pagesController@profile');
+
+

@@ -27,7 +27,7 @@ class diplomaController extends Controller
      */
     public function create()
     {
-        //
+        return view('diploma.create');
     }
 
     /**

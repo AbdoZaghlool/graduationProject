@@ -7,8 +7,12 @@
         <meta name="description" content="this's a website yoc an easily find any course where are you there.....">
         <meta name="keywords" content="courses, diploma, cetification, programming, computer science">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/all.css')}}">
+        <link rel="stylesheet" href="{{asset('css/company-style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/companyViewProfile-style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/sideNav.css')}}">
+
         <script src="js/all.min.js"></script>
         <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -19,27 +23,22 @@
     <title>intelligent search in privte institute</title>
     </head>
 
-<body>
-
-        <main class="py-4">
-
-            @include('inc.snav')
-
-            @include('inc.nav2')
-
-            @yield('content')
-
-            @include('inc.footer')
-
-        </main>
-    </div>
+    <body>
 
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/script-index.js"></script>
+        @include('inc.nav2')
+
+        @yield('content')
+
+        @include('inc.footer')
 
 
-        </body>
-    </html>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/script-index.js"></script>
+
+
+    </body>
+</html>

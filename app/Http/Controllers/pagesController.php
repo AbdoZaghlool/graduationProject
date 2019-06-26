@@ -12,7 +12,12 @@ class pagesController extends Controller
     }
     public function centers()
     {
-        return view('pages.center');
+        return view('center.index');
+    }
+    public function profile()
+    {
+        return view('center.profile');
+
     }
 
 }
