@@ -27,7 +27,8 @@
                 <div class="container-signin" id="container-login">
                 <div class="form-container sign-in-user-container">
 
-                   <form method="POST" action="{{ route('login') }}">
+                         <form method="POST" action="{{ url('login') }}">
+
                         @csrf
 
                         <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff"> User Login</h1>
@@ -63,9 +64,13 @@
                                     </a>
                                 @endif
 
+                                 </form>
+
+
                 </div>
                 <div class="form-container sign-in-org-container">
-                    <form action="#">
+                     <form action="{{ url('/institute/login') }}" method="post">
+                    @csrf
                         <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
                         ">Training-Center Login</h1>
                         <div class="social-container">
@@ -75,17 +80,15 @@
                         </div>
                         <span>or use your account</span>
 
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                    <br>
 
-                       <!-- <button><a href="/ispi/public/centers"></a>Sign In</button>  -->
+                         <input type="email" placeholder="Email" name='email'  />
+                        <input type="password" placeholder="Password"  name='password' />
+                    <br>
+                         <button type="submit" >Sign In</button>  
                     </form>
 
-                    <!-- make button 0out form to go dir centera-->
+                    
 
-
-                    <button onclick="/ispi/public/centers">Sign In</button>
                 </div>
                 <div class="overlay-container">
                     <div class="overlay">

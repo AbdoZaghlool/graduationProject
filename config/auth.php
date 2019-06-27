@@ -18,6 +18,12 @@ return [
         'passwords' => 'users',
     ],
 
+    'institutes' => [
+        'driver' => 'eloquent',
+        'model' => App\institute::class,
+    ],
+
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -39,6 +45,10 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+        'institute' => [
+            'driver' => 'session',
+            'provider' => 'institutes',
         ],
 
         'api' => [
@@ -70,12 +80,17 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'institutes' => [
+            'driver' => 'eloquent',
+            'model' => App\institute::class,
+        ],
+    ],
 
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-    ],
+    
 
     /*
     |--------------------------------------------------------------------------

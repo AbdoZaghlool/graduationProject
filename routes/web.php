@@ -28,3 +28,22 @@ Route::get('/centers', 'pagesController@centers');
 Route::get('/centers/profile', 'pagesController@profile');
 
 
+
+
+
+
+
+
+Route::group(['prefix' => 'institute'], function () {
+    Route::get('/login', 'InstituteAuth\LoginController@showLoginForm')->name('institute.login');
+    Route::post('/login', 'InstituteAuth\LoginController@login')->name('institutes.login');
+    Route::get('/logout', 'InstituteAuth\LoginController@logout')->name('institute.logout');
+  
+    Route::get('/register', 'InstituteAuth\RegisterController@showRegistrationForm')->name('institute.register');
+    Route::post('/register', 'InstituteAuth\RegisterController@register');
+  
+   /* Route::post('/password/email', 'InstituteAuth\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.request');
+    Route::post('/password/reset', 'InstituteAuth\ResetPasswordController@reset')->name('admin.password.email');
+    Route::get('/password/reset', 'InstituteAuth\ForgotPasswordController@showLinkRequestForm')->name('admin.password.reset');
+    Route::get('/password/reset/{token}', 'InstituteAuth\ResetPasswordController@showResetForm');*/
+  });
