@@ -13,6 +13,13 @@ class City extends Model
         return($this->hasMany('App\user'));
     }
 
+    public function institutes()
+    {
+
+        return $this->belongsToMany('App\Institute')->withPivot('branch_name');
+
+    }
+
 
 
 }

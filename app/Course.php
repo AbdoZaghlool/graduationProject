@@ -12,7 +12,7 @@ class Course extends Model
 
     public function institutes()
     {
-       return $this->belongsToMany('App\Institute')/*->withPivot('co_sc_sDate','co_sc_price','duration','price')*/;
+       return $this->belongsToMany('App\Institute')->withPivot('co_sc_sDate','co_sc_price','duration','trainer');
 
     }
 

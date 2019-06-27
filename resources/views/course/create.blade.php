@@ -7,12 +7,12 @@
         <div class="container">
             <form action="/ispi/public/course" method="POST">
                 @csrf
-                <label style="text-transform: uppercase">choose Categoty of this Course</label>
+                <!--<label style="text-transform: uppercase">choose Categoty of this Course</label>
                 <select name="category" class="form-control">
                         <option>Programming</option> <option>Networ</option> <option>Control</option> <option>Embeded Systems</option>
                         <option>Data Base</option> <option>Business Management</option> <option>Accounting</option> <option>Language</option>
                 </select>
-                <br>
+            --><br>
                 <label for="inputCity">Subject Learning</label>
                 <input name="name" class="form-control" type="text" placeholder="subject like: ccna or java or php">
                 <br>

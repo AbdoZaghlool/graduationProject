@@ -19,8 +19,9 @@ class userController extends Controller
     }
     public function info()
     {
-        $city = City::all()->pluck('city_id','city_name');
-        return view('userProfile.changeInfo')->with('city',$city);
+        //$city = City::all()->pluck('city_id','city_name');
+
+        return view('userProfile.changeInfo');
     }
     public function privacy()
     {
@@ -68,10 +69,10 @@ class userController extends Controller
         ]);
         $user = Auth::user();
         $user->name=$request->input('name');
-       // $user->city()->city_name=$request->input('address');
-//        $user->name=$request->input('name');
+        $user->city_id=$request->input('address');
+        $user->phone=$request->input('phone');
         $user->save();
 
-        return view('userProfile.dashboard')->with('user', $user);
+        return view('userProfile.dashboard')->with('success', 'Information Updated :)');
     }
 }

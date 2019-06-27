@@ -38,18 +38,19 @@ class courseController extends Controller
      */
     public function store(Request $request)
     {
-        $course= new course;
-        $course->name=$request->input('name');
-        $course->description=$request->input('description');
-        $course->pivot->duration=$request->input('duration');
-        $course->pivot->co_sc_sDate=$request->input('start-date');
-        $course->pivot->trainer=$request->input('trainer');
-        $course->pivot->co_sc_price=$request->input('price');
-        $course->save();
+
+        $course= new Course;
+        $course->course_name=$request->input('name');
+        $course->course_desc=$request->input('description');
+
+        Institute::find(1)->courses()->save($course,$arr=['duration'=>$request->input('duration'),
+                                                          'co_sc_sDate'=>$request->input('start-date'),
+                                                          'trainer'=>$request->input('trainer'),
+                                                          'co_sc_price'=>$request->input('price')
+                                                          ]);
 
 
-
-        return redirect('/center')->with('succes','course created!');
+        return redirect('/centers')->with('succes','course created!');
     }
 
     /**
