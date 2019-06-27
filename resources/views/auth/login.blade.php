@@ -62,10 +62,11 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                    
+                    </form>
                 </div>
                 <div class="form-container sign-in-org-container">
-                    <form action="/ispi/public/institute/login" method="GET">
+                    <form action="{{ url('/institute/login') }}" method="post">
+                    @csrf
                          <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
                         ">Training-Center Login</h1>
                         <div class="social-container">
@@ -79,7 +80,7 @@
                         <input type="password" placeholder="Password" name='password' />
                     <br>
                     
-                        <button><a href="/ispi/public/centers"></a>Sign In</button>  
+                        <button type="submit" >Sign In</button>  
                     </form>
 
                     <!--    -->

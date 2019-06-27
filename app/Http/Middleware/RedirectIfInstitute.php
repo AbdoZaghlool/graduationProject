@@ -18,7 +18,7 @@ class RedirectIfInstitute
 	public function handle($request, Closure $next, $guard = 'institute')
 	{
 	    if (Auth::guard($guard)->check()) {
-	        return redirect('institute/home');
+	        return redirect('centers');
 	    }
 
 	    return $next($request);
