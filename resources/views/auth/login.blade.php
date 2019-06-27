@@ -65,7 +65,7 @@
                     </form>
                 </div>
                 <div class="form-container sign-in-org-container">
-                    <form action="{{ ('/institute/login') }}" method="post">
+                    <form action="{{ url('/institute/login') }}" method="post">
                     @csrf
                          <h1 style=" text-shadow: 0 0 10px rgb(22, 48, 58);color: #fff
                         ">Training-Center Login</h1>
@@ -109,7 +109,7 @@
 
 
 
-                  
+                 
                 </div>
             </div>
         </div>
