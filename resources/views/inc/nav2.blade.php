@@ -21,7 +21,6 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/home">home</a></li>
                             <li>
                                 <a href="{{ route('institute.logout') }}"
                                     onclick="event.preventDefault();
@@ -36,6 +35,6 @@
                         </ul>
                     </li>
                 @endif
-            </ul> 
+            </ul>
         <a href=""><i class="far fa-question-circle"></i> Reply Recieved Questions</a>
 </nav>

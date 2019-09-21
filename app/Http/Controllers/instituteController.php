@@ -1,6 +1,10 @@
 <?php
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+use App\Course;
+use App\Institute;
+
 class instituteController extends Controller
 {
     /**
@@ -19,6 +23,9 @@ class instituteController extends Controller
      */
     public function index()
     {
-        return view('institute');
+        $inst=Institute::courses()->all();
+
+       // $courses = Course::all();
+        return view('center.index')->with('inst', $inst);
     }
 }

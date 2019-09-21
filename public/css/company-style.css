@@ -43,15 +43,15 @@ input, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+   
 }
 
 
-color:#797070;
 
 #search-cover h1{
     font-size: 2.7rem;
     padding: 20px ;
+    color:#797070;
     display: block;
     text-align: center;
 }
@@ -142,7 +142,7 @@ color:#797070;
     position: absolute;
     top: 0px;
     right: 0px;
-
+   
 }
 
 /* for company */
@@ -203,7 +203,7 @@ color:#797070;
 }
 
 textarea{
-
+   
 display: block;
 margin: auto;
 background:rgba(100, 155, 255, 0.9);
@@ -255,7 +255,7 @@ direction: rtl;
     font-size: 1rem;
     font-weight: 400;
     width: 80%;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);  
 }
 
 .course-description h3 svg {
@@ -263,7 +263,7 @@ direction: rtl;
     font-weight: 300;
     transition: all .4s ease-in-out;
     cursor: pointer;
-
+   
 }
 
 
@@ -304,11 +304,11 @@ footer {
 }
 
 .footer-wrap {
-
+    
     display: flex;
     justify-content: space-around;
     height: 12rem;
-    align-items: center;
+    align-items: center;  
 }
 
 .footer-wrap div {
@@ -316,7 +316,7 @@ footer {
     flex-direction: column;
 }
 .footer-wrap div a {
-
+    
     margin: .7rem 0;
     font-weight: 500;
     text-align: center;
@@ -489,7 +489,7 @@ ul {
 
 
 .tex, textarea{
-
+   
 display: block;
 margin: auto;
 background:rgba(2, 60, 60, 0.72);
@@ -551,7 +551,7 @@ color: #fff
     transition: all .4s ease-in-out;
     cursor: pointer;
     font-size: 1.2rem
-
+   
 }
 
 
@@ -598,7 +598,7 @@ color: #fff
     width: 30vw;
     margin: auto;
     text-align: center;
-
+   
 }
 .adding-post ul {
     display: block;
@@ -606,11 +606,11 @@ color: #fff
     flex-direction: row;
     margin: auto;
     width: 100%;
-
+    
 }
 
 .adding-post ul li {
-
+   
     text-align: center;
 }
 

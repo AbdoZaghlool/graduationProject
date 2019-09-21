@@ -370,9 +370,6 @@ main-form{
 }
 
 
-input::placeholder {
-    direction:  !important
-}
 
 .post-content {
     text-align: right

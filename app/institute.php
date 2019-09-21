@@ -4,13 +4,15 @@ namespace App;
 
 use App\Notifications\InstituteResetPassword;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
 class Institute extends Authenticatable
 {
     use Notifiable;
-    protected $table = 'institute';
-     
-    
+    protected $table = 'institutes';
+
+
       /**
        * The attributes that are mass assignable.
        *
@@ -37,7 +39,7 @@ class Institute extends Authenticatable
       {
           $this->notify(new InstituteResetPassword($token));
       }
-  
+
 
     public function courses()
     {

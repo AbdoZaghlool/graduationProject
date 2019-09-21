@@ -19,9 +19,8 @@ class userController extends Controller
     }
     public function info()
     {
-        //$city = City::all()->pluck('city_id','city_name');
-
-        return view('userProfile.changeInfo');
+        $city = City::all()->pluck('city_id','city_name');
+        return view('userProfile.changeInfo')->with('city',$city);
     }
     public function privacy()
     {

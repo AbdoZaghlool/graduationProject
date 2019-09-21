@@ -122,8 +122,12 @@
 
                         <div class="main-search">
                             <div class="search-bar">
-                                    <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Web, Network, control....etc" id="search-m" class="checkLang">
+                        <form method="GET" action="/ispi/public/search">
+                            <input type="text" name="search" placeholder="Web, Network, control....etc" id="search-m" class="checkLang">
+                            <button type="submit" style="disply:none"><i class="fas fa-search" style="cursor:pointer"></i></button>
+
+                        </form>
+
                         </div>
                                 <ul>
 

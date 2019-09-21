@@ -18,10 +18,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
+            <div class="">
 
 
-                <div class="card-body">
+                <div class="">
                   <!-- aaaaaaaaaa-->
 
                 <div class="container-signin" id="container-login">
@@ -84,10 +84,10 @@
                          <input type="email" placeholder="Email" name='email'  />
                         <input type="password" placeholder="Password"  name='password' />
                     <br>
-                         <button type="submit" >Sign In</button>  
+                         <button type="submit" >Sign In</button>
                     </form>
 
-                    
+
 
                 </div>
                 <div class="overlay-container">

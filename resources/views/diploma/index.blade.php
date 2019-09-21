@@ -2,10 +2,6 @@
 
 @section('content')
 
-    @if (count($diplomas)>0)
-
-    @foreach ($diplomas as $diploma)
-
 
 <div class="posts-wrapper">
         <div class="empty"></div>
@@ -41,11 +37,7 @@
                 </div>
 </div>
 
-    @endforeach
 
-    @else
-    <p>No Posts Found :(</p>
-    @endif
 
 
 

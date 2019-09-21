@@ -5,7 +5,7 @@
 <section class="edite-personal-info-wrapper" id="addNewPost"style="padding:0; margin:30px">
         <h1>ADD COURSE</h1>
         <div class="container">
-            <form action="/ispi/public/course" method="POST">
+        <form action="/ispi/public/course/" method="PATCH">
                 @csrf
                 <br>
                 <label for="inputCity">Subject Learning</label>
@@ -48,5 +48,14 @@
             </form>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
 
 @endsection

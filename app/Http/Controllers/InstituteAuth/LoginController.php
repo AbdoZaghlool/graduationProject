@@ -53,8 +53,5 @@ class LoginController extends Controller
     {
         return Auth::guard('institute');
     }
-   /* public function index()
-    {
-        return view('pages.institutedashboard');
-    } */
+
 }

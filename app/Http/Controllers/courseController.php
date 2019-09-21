@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+use InstituteAuth;
 
 
 use Illuminate\Http\Request;
 use App\Course;
-use App\institute;
-
+use App\Institute;
+use App\City;
+use App\Http\Controllers\Auth;
+use Illuminate\Support\Collection;
 
 class courseController extends Controller
 {
@@ -17,7 +20,14 @@ class courseController extends Controller
      */
     public function index()
     {
-        return view('course.index');
+        $var = new Collection();
+        foreach(Institute::all() as $institute){
+            $var =$var->merge($institute->courses()->get());
+        }
+
+
+        //dd($var);
+        return view('course.index')->with('var',$var);
     }
 
     /**
@@ -27,7 +37,8 @@ class courseController extends Controller
      */
     public function create()
     {
-        return view('course.create');
+        $city = City::all()->pluck('city_id','city_name');
+        return view('course.create')->with('city',$city);
     }
 
     /**
@@ -42,15 +53,21 @@ class courseController extends Controller
         $course= new Course;
         $course->course_name=$request->input('name');
         $course->course_desc=$request->input('description');
+        //send the id of auth center to save it's data to DB
 
-        Institute::find(1)->courses()->save($course,$arr=['duration'=>$request->input('duration'),
-                                                          'co_sc_sDate'=>$request->input('start-date'),
-                                                          'trainer'=>$request->input('trainer'),
-                                                          'co_sc_price'=>$request->input('price')
-                                                          ]);
+        $adminId=auth()->guard('institute')->user()->id;
+        Institute::find($adminId)->cities()->save($course,['city_id'=> $request->input('address'),
+                                                    'branch_name'=>$request->input('value')
+                                                    ]);
+
+        Institute::find($adminId)->courses()->save($course,['duration'=>$request->input('duration'),
+                                                    'co_sc_sDate'=>$request->input('start-date'),
+                                                    'trainer'=>$request->input('trainer'),
+                                                    'co_sc_price'=>$request->input('price'),
+                                                    ]);
 
 
-        return redirect('/centers')->with('succes','course created!');
+        return redirect('/centers');
     }
 
     /**
@@ -72,7 +89,8 @@ class courseController extends Controller
      */
     public function edit($id)
     {
-        //
+
+
     }
 
     /**

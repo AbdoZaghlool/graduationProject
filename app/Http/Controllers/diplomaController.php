@@ -16,8 +16,7 @@ class diplomaController extends Controller
      */
     public function index()
     {
-        $diplomas=diplomaScheduling::all();
-        return view('diploma.index')->with('diplomas',$diplomas);
+        return view('diploma.index');
     }
 
     /**
@@ -38,7 +37,7 @@ class diplomaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="{{asset('css/company-style.css')}}">
         <link rel="stylesheet" href="{{asset('css/companyViewProfile-style.css')}}">
         <link rel="stylesheet" href="{{asset('css/sideNav.css')}}">
+        <link rel="stylesheet" href="{{asset('css/addPostAll.css')}}">
+
 
         <script src="js/all.min.js"></script>
         <script
@@ -30,8 +32,16 @@
 
         @yield('content')
 
-        @include('inc.footer')
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    @include('inc.messages')
+                </div>
+            </div>
+        </div>
 
+
+        @include('inc.footer')
 
 
         <script src="js/jquery-3.4.1.min.js"></script>

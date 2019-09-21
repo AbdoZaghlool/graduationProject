@@ -201,9 +201,7 @@ footer {
     box-shadow: 0px 0px 9px #c3bcbc;
     width: calc(100% - 12rem);
     float: right;
-   
-
-
+    overflow-x: hidden;
 }
 
 .footer-wrap {
